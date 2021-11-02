@@ -1,4 +1,4 @@
-package nl.belastingdienst.SpringBootSnow.Instructor;
+package nl.belastingdienst.SpringBootSnow.person.instructor;
 
 import nl.belastingdienst.SpringBootSnow.bluePrints.ControllerBP;
 import org.springframework.beans.factory.annotation.Autowired;

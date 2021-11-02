@@ -1,4 +1,4 @@
-package nl.belastingdienst.SpringBootSnow.Instructor;
+package nl.belastingdienst.SpringBootSnow.person.instructor;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

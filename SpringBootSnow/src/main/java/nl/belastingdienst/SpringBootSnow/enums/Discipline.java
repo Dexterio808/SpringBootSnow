@@ -1,2 +1,5 @@
-package nl.belastingdienst.SpringBootSnow;public enum Discipline {
+package nl.belastingdienst.SpringBootSnow.enums;
+
+public enum Discipline {
+    SKI, SNOWBOARD
 }

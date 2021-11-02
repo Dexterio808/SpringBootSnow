@@ -1,4 +1,4 @@
-package nl.belastingdienst.SpringBootSnow;
+package nl.belastingdienst.SpringBootSnow.bluePrints;
 
 import org.springframework.stereotype.Service;
 

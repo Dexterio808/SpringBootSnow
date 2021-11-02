@@ -1,4 +1,4 @@
-package nl.belastingdienst.SpringBootSnow;
+package nl.belastingdienst.SpringBootSnow.person;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,6 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @MappedSuperclass

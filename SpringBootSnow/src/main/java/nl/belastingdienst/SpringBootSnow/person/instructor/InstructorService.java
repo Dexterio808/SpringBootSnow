@@ -1,6 +1,7 @@
-package nl.belastingdienst.SpringBootSnow.Instructor;
+package nl.belastingdienst.SpringBootSnow.person.instructor;
 
 import nl.belastingdienst.SpringBootSnow.bluePrints.ServiceBP;
+import nl.belastingdienst.SpringBootSnow.lesson.Lesson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +35,7 @@ public class InstructorService implements ServiceBP<Instructor> {
 
     @Override
     public void update(Long id, Instructor instructor) {
-        if (instructorRepository.existsById(id)){
+        if (instructorRepository.existsById(id)) {
             Instructor i = instructorRepository.findById(id).get();
             i.setFirstName(instructor.getFirstName());
             i.setLastName(instructor.getLastName());
@@ -45,8 +46,17 @@ public class InstructorService implements ServiceBP<Instructor> {
 
     @Override
     public void delete(Long id) {
-        if (instructorRepository.existsById(id)){
+        if (instructorRepository.existsById(id)) {
             instructorRepository.delete(instructorRepository.getById(id));
         }
     }
+
+    public void addToLesson(Long instructorId, Lesson lesson) {
+        if (instructorRepository.existsById(instructorId)) {
+            Instructor i = instructorRepository.findById(instructorId).get();
+            i.setLesson(lesson);
+            instructorRepository.save(i);
+        }
+    }
+
 }

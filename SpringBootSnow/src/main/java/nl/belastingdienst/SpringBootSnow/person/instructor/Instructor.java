@@ -1,7 +1,6 @@
-package nl.belastingdienst.SpringBootSnow.Instructor;
+package nl.belastingdienst.SpringBootSnow.person.instructor;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import nl.belastingdienst.SpringBootSnow.enums.LicenceType;
