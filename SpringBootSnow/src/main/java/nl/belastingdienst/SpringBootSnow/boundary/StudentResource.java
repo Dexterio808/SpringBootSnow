@@ -21,6 +21,7 @@ public class StudentResource implements Resource<Student, StudentDto> {
         this.studentService = studentService;
     }
 
+    @Override
     @GetMapping()
     public List<StudentDto> findAll(){
         List<StudentDto> result = new ArrayList<>();
@@ -28,18 +29,22 @@ public class StudentResource implements Resource<Student, StudentDto> {
         return result;
     }
 
+    @Override
     public StudentDto findById(@PathVariable Long id){
         return StudentMapper.mapToDto(studentService.findById(id));
     }
 
+    @Override
     public void save(@RequestBody StudentDto studentDto){
         studentService.save(studentDto);
     }
 
+    @Override
     public void update(@RequestBody StudentDto studentDto){
         studentService.update(studentDto);
     }
 
+    @Override
     public void delete(@PathVariable Long id){
         studentService.delete(id);
     }
