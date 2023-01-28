@@ -30,7 +30,7 @@ public class SpringBootSnowApplication {
 			userService.saveRole(new Role(null, "ROLE_USER"));
 			userService.saveRole(new Role(null, "ROLE_ADMIN"));
 
-			userService.saveUser(new AppUser(null, "pepijn tounoij", "tourp", "1234", new ArrayList<>()));
+			userService.saveUser(new AppUser(null, "pepijn tournoij", "tourp", "1234", new ArrayList<>()));
 
 			userService.addRoleToUser("tourp", "ROLE_USER");
 			userService.addRoleToUser("tourp", "ROLE_ADMIN");

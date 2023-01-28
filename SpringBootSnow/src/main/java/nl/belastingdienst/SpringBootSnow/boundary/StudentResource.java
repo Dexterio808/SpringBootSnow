@@ -28,22 +28,18 @@ public class StudentResource implements Resource<Student, StudentDto> {
         return result;
     }
 
-    @GetMapping(path = "/{id}")
     public StudentDto findById(@PathVariable Long id){
         return StudentMapper.mapToDto(studentService.findById(id));
     }
 
-    @PostMapping(path = "/save")
     public void save(@RequestBody StudentDto studentDto){
         studentService.save(studentDto);
     }
 
-    @PutMapping(path = "/update/{id}")
     public void update(@RequestBody StudentDto studentDto){
         studentService.update(studentDto);
     }
 
-    @DeleteMapping(path = "/delete/{id}")
     public void delete(@PathVariable Long id){
         studentService.delete(id);
     }

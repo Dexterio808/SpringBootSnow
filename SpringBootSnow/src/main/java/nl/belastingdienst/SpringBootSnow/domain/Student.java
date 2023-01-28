@@ -19,6 +19,7 @@ public class Student extends Person {
     private int weeksOfExperience;
     private Discipline discipline;
     private boolean hasOwnGear;
+
     @ManyToOne
     private Lesson lesson;
     @OneToOne
